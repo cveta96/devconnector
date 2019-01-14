@@ -11,8 +11,8 @@ const posts = require('./routes/api/posts');
 const app = express();
 
 // Body parser middleware 
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Passport middleware
 app.use(passport.initialize());
@@ -30,7 +30,7 @@ mongoose
     .catch(err => console.log(err));
 
 // Run server
-app.get('/',(req,res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.send('Hello World!'));
 
 // Use Routes
 app.use('/api/users', users);
