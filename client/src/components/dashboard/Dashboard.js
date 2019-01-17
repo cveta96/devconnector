@@ -34,19 +34,19 @@ class Dashboard extends Component {
             <p className="lead text-muted">
               Wellcome{" "}
               <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
-              <br />
-              <ProfileActions />
-              <Experience experience={profile.experience} />
-              <Education education={profile.education} />
-              <div style={{ marginBottom: "60px" }}>
-                <button
-                  onClick={this.onDeleteClick.bind(this)}
-                  className="btn btn-danger"
-                >
-                  Delete my account
-                </button>
-              </div>
             </p>
+            <br />
+            <ProfileActions />
+            <Experience experience={profile.experience} />
+            <Education education={profile.education} />
+            <div style={{ marginBottom: "60px" }}>
+              <button
+                onClick={this.onDeleteClick.bind(this)}
+                className="btn btn-danger"
+              >
+                Delete my account
+              </button>
+            </div>
           </div>
         );
       } else {

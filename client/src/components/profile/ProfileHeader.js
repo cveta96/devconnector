@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import isEmpty from "../../validation/is-empty";
+import refSite from "../../validation/ref-site";
 
 class ProfileHeader extends Component {
   render() {
@@ -30,7 +31,7 @@ class ProfileHeader extends Component {
                 {isEmpty(profile.website) ? null : (
                   <a
                     className="text-white p-2"
-                    href={profile.website}
+                    href={refSite(profile.website)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -41,7 +42,7 @@ class ProfileHeader extends Component {
                 {isEmpty(profile.social && profile.social.twitter) ? null : (
                   <a
                     className="text-white p-2"
-                    href={profile.social.twitter}
+                    href={refSite(profile.social.twitter)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -51,7 +52,7 @@ class ProfileHeader extends Component {
                 {isEmpty(profile.social && profile.social.facebook) ? null : (
                   <a
                     className="text-white p-2"
-                    href={profile.social.facebook}
+                    href={refSite(profile.social.facebook)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -61,7 +62,7 @@ class ProfileHeader extends Component {
                 {isEmpty(profile.social && profile.social.linkedin) ? null : (
                   <a
                     className="text-white p-2"
-                    href={profile.social.linkedin}
+                    href={refSite(profile.social.linkedin)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -71,7 +72,7 @@ class ProfileHeader extends Component {
                 {isEmpty(profile.social && profile.social.youtube) ? null : (
                   <a
                     className="text-white p-2"
-                    href={profile.social.youtube}
+                    href={refSite(profile.social.youtube)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -81,7 +82,7 @@ class ProfileHeader extends Component {
                 {isEmpty(profile.social && profile.social.instagram) ? null : (
                   <a
                     className="text-white p-2"
-                    href={profile.social.instagram}
+                    href={refSite(profile.social.instagram)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
